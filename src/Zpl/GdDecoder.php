@@ -4,6 +4,7 @@ namespace Zebra\Zpl;
 
 use InvalidArgumentException;
 use Zebra\Contracts\Zpl\Decoder;
+use GdImage;
 
 class GdDecoder implements Decoder
 {
