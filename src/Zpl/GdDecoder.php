@@ -50,11 +50,7 @@ class GdDecoder implements Decoder
      */
     public function isGdResource($image): bool
     {
-        if (is_resource($image)) {
-            return get_resource_type($image) === 'gd';
-        }
-
-        return false;
+        return (is_resource($image) && get_resource_type($image) === 'gd') || (is_object($image) && $image instanceOf GdImage);
     }
 
     /**
